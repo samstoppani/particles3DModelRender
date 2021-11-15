@@ -9,7 +9,7 @@ module.exports = {
     {
         filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, '../dist'),
-        // publicPath: 'https://samstoppani.github.io/particles3DModelRender/'
+        publicPath: 'https://samstoppani.github.io/particles3DModelRender/'
     },
     devtool: 'source-map',
     plugins:
@@ -23,15 +23,15 @@ module.exports = {
             template: path.resolve(__dirname, '../src/index.html'),
             minify: true,
             favicon: "./static/favicon.png",
-            // meta: {
-            //     'description': { name: 'description', content: 'Particles - 3D Model and Animation Render' },
-            //     'og:title': { property: 'og:title', content: 'Particles - 3D Model and Animation Render' },
-            //     'og:description': { property: 'og:description', content:  '3D model particle render using Three.js'},
-            //     'og:type': { property: 'og:type', content: 'website' },
-            //     'og:url': { property: 'og:url', content: 'https://samstoppani.github.io/particles3DModelRender/' },
-            //     'og:image': { property: 'og:image', content: 'https://samstoppani.github.io/particles3DModelRender/preview.png' },
-            //     'twitter:image': { name: 'twitter:image', content: 'https://samstoppani.github.io/particles3DModelRender/preview.png' }
-            // }
+            meta: {
+                'description': { name: 'description', content: 'Particles - 3D Model and Animation Render' },
+                'og:title': { property: 'og:title', content: 'Particles - 3D Model and Animation Render' },
+                'og:description': { property: 'og:description', content:  '3D model particle render using Three.js'},
+                'og:type': { property: 'og:type', content: 'website' },
+                'og:url': { property: 'og:url', content: 'https://samstoppani.github.io/particles3DModelRender/' },
+                'og:image': { property: 'og:image', content: 'https://samstoppani.github.io/particles3DModelRender/preview.png' },
+                'twitter:image': { name: 'twitter:image', content: 'https://samstoppani.github.io/particles3DModelRender/preview.png' }
+            }
         }),
         new MiniCSSExtractPlugin()
     ],
