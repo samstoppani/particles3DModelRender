@@ -9,7 +9,7 @@ module.exports = {
     {
         filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, '../dist'),
-        // publicPath: 'https://samstoppani.github.io/particles3DModelRender/'
+        publicPath: 'https://samstoppani.github.io/particles3DModelRender/'
     },
     devtool: 'source-map',
     plugins:
