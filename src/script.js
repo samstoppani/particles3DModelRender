@@ -153,20 +153,22 @@ gltfLoader.load(
     }
 )
 
+// Desktop Interactivity
+let isSwiping = false
+document.getElementById('webgl').addEventListener('mousemove', () => {
+    isSwiping = true
+});
 
-
-/**
- * Interactivity
- */
-
-window.addEventListener('click', () =>
-{   
-    particles.nextParticles()
+document.getElementById('webgl').addEventListener('click', e => {  
+    e.preventDefault();
+    if (!isSwiping) {
+        particles.nextParticles()
+    }
+    isSwiping = false;
 })
 
-
-let isSwiping = false
-window.addEventListener('touchstart', () => {
+// Mobile Interactivity
+document.getElementById('webgl').addEventListener('touchstart', () => {
     isSwiping = false;
 });
   
@@ -174,9 +176,8 @@ document.getElementById('webgl').addEventListener('touchmove', () => {
     isSwiping = true;
 });
   
-window.addEventListener('touchend', e => {
+document.getElementById('webgl').addEventListener('touchend', e => {
     e.preventDefault();
-
     if (!isSwiping) {
         particles.nextParticles()
     }
